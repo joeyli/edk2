@@ -104,6 +104,7 @@ ResetSystem (
   EFI_STATUS    Status;
   UINTN         Size;
   UINTN         CapsuleDataPtr;
+  DEBUG ((EFI_D_INFO, "ResetSystem\n"));
   
   //
   // Indicate reset system runtime service is called.

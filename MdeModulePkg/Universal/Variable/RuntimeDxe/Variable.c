@@ -2803,6 +2803,7 @@ VariableServiceGetVariable (
   VARIABLE_POINTER_TRACK  Variable;
   UINTN                   VarDataSize;
 
+  DEBUG ((EFI_D_INFO, "VariableServiceGetVariable: %s:%g\n", VariableName, VendorGuid));
   if (VariableName == NULL || VendorGuid == NULL || DataSize == NULL) {
     return EFI_INVALID_PARAMETER;
   }
@@ -3020,6 +3021,7 @@ VariableServiceGetNextVariableName (
   UINTN                   VarNameSize;
   VARIABLE_HEADER         *VariablePtr;
 
+  DEBUG ((EFI_D_INFO, "VariableServiceGetNextVariableName: %s:%g\n", VariableName, VendorGuid));
   if (VariableNameSize == NULL || VariableName == NULL || VendorGuid == NULL) {
     return EFI_INVALID_PARAMETER;
   }
@@ -3086,6 +3088,7 @@ VariableServiceSetVariable (
   EFI_PHYSICAL_ADDRESS                Point;
   UINTN                               PayloadSize;
 
+  DEBUG ((EFI_D_INFO, "VariableServiceSetVariable: %s:%g\n", VariableName, VendorGuid));
   //
   // Check input parameters.
   //

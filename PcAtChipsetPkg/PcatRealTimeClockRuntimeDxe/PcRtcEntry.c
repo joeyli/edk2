@@ -39,6 +39,7 @@ PcRtcEfiGetTime (
   OUT EFI_TIME_CAPABILITIES   *Capabilities  OPTIONAL
   )
 {
+  DEBUG ((EFI_D_INFO, "PcRtcEfiGetTime\n"));
   return PcRtcGetTime (Time, Capabilities, &mModuleGlobal);
 }
 
@@ -58,6 +59,7 @@ PcRtcEfiSetTime (
   IN EFI_TIME                *Time
   )
 {
+  DEBUG ((EFI_D_INFO, "PcRtcEfiSetTime\n"));
   return PcRtcSetTime (Time, &mModuleGlobal);
 }
 
@@ -84,6 +86,7 @@ PcRtcEfiGetWakeupTime (
   OUT EFI_TIME    *Time
   )
 {
+  DEBUG ((EFI_D_INFO, "PcRtcEfiGetWakeupTime\n"));
   return PcRtcGetWakeupTime (Enabled, Pending, Time, &mModuleGlobal);
 }
 
@@ -109,6 +112,7 @@ PcRtcEfiSetWakeupTime (
   IN EFI_TIME    *Time       OPTIONAL
   )
 {
+  DEBUG ((EFI_D_INFO, "PcRtcEfiSetWakeupTime\n"));
   return PcRtcSetWakeupTime (Enabled, Time, &mModuleGlobal);
 }
 

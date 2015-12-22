@@ -42,6 +42,7 @@ KbcResetSystem (
   IN VOID             *ResetData OPTIONAL
   )
 {
+  DEBUG ((EFI_D_INFO, "KbcResetSystem\n"));
   switch (ResetType) {
   case EfiResetWarm:
     ResetWarm ();
